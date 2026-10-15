@@ -1,0 +1,165 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #26352c;
+    background-color: #f5f8f4;
+}
+
+header {
+    background-color: #244b37;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header h2 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+nav a,
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.hero {
+    background-color: #dcebdc;
+    text-align: center;
+    padding: 70px 20px;
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+}
+
+.button,
+button {
+    display: inline-block;
+    background-color: #244b37;
+    color: white;
+    padding: 12px 22px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+section {
+    padding: 40px 5%;
+}
+
+section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.cards,
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background-color: white;
+    padding: 22px;
+    border-radius: 8px;
+    border: 1px solid #d7e2d7;
+}
+
+#about p {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+}
+
+form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8c9ba;
+    border-radius: 5px;
+    font: inherit;
+}
+
+button {
+    margin-top: 10px;
+}
+
+footer {
+    background-color: #244b37;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tablet layout */
+@media (max-width: 768px) {
+    .cards,
+    .reviews {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    header {
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .cards,
+    .reviews {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    section {
+        padding: 30px 5%;
+    }
+}
